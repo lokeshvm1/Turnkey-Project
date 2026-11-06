@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Villa Smooth Scrolling Frames</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: #111;
+            color: #eee;
+            font: 16px/1.5 system-ui, sans-serif
+        }
+
+        header {
+            padding: 24px;
+            text-align: center
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+            font-size: clamp(22px, 4vw, 38px)
+        }
+
+        header p {
+            color: #aaa;
+            margin: 0
+        }
+
+        .gallery {
+            max-width: 1000px;
+            margin: auto;
+            padding: 12px 20px 60px
+        }
+
+        .frame {
+            margin: 0 0 28px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px #0008;
+            opacity: 0;
+            transform: translateY(35px);
+            animation: reveal .8s ease forwards
+        }
+
+        .frame img {
+            display: block;
+            width: 100%;
+            height: auto
+        }
+
+        @keyframes reveal {
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .frame:nth-child(3n) {
+            animation-delay: .08s
+        }
+
+        .frame:nth-child(3n+1) {
+            animation-delay: .16s
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .frame {
+                animation: none;
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Modern Luxury Villa</h1>
+        <p>Frame-by-frame smooth scroll animation · Scroll down to explore</p>
+    </header>
+    <main class="gallery">
+        <figure class="frame"><img loading="lazy" src="frames/frame_0000.jpg" alt="Villa video frame 1"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0001.jpg" alt="Villa video frame 2"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0002.jpg" alt="Villa video frame 3"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0003.jpg" alt="Villa video frame 4"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0004.jpg" alt="Villa video frame 5"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0005.jpg" alt="Villa video frame 6"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0006.jpg" alt="Villa video frame 7"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0007.jpg" alt="Villa video frame 8"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0008.jpg" alt="Villa video frame 9"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0009.jpg" alt="Villa video frame 10"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0010.jpg" alt="Villa video frame 11"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0011.jpg" alt="Villa video frame 12"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0012.jpg" alt="Villa video frame 13"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0013.jpg" alt="Villa video frame 14"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0014.jpg" alt="Villa video frame 15"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0015.jpg" alt="Villa video frame 16"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0016.jpg" alt="Villa video frame 17"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0017.jpg" alt="Villa video frame 18"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0018.jpg" alt="Villa video frame 19"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0019.jpg" alt="Villa video frame 20"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0020.jpg" alt="Villa video frame 21"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0021.jpg" alt="Villa video frame 22"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0022.jpg" alt="Villa video frame 23"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0023.jpg" alt="Villa video frame 24"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0024.jpg" alt="Villa video frame 25"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0025.jpg" alt="Villa video frame 26"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0026.jpg" alt="Villa video frame 27"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0027.jpg" alt="Villa video frame 28"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0028.jpg" alt="Villa video frame 29"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0029.jpg" alt="Villa video frame 30"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0030.jpg" alt="Villa video frame 31"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0031.jpg" alt="Villa video frame 32"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0032.jpg" alt="Villa video frame 33"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0033.jpg" alt="Villa video frame 34"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0034.jpg" alt="Villa video frame 35"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0035.jpg" alt="Villa video frame 36"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0036.jpg" alt="Villa video frame 37"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0037.jpg" alt="Villa video frame 38"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0038.jpg" alt="Villa video frame 39"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0039.jpg" alt="Villa video frame 40"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0040.jpg" alt="Villa video frame 41"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0041.jpg" alt="Villa video frame 42"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0042.jpg" alt="Villa video frame 43"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0043.jpg" alt="Villa video frame 44"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0044.jpg" alt="Villa video frame 45"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0045.jpg" alt="Villa video frame 46"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0046.jpg" alt="Villa video frame 47"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0047.jpg" alt="Villa video frame 48"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0048.jpg" alt="Villa video frame 49"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0049.jpg" alt="Villa video frame 50"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0050.jpg" alt="Villa video frame 51"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0051.jpg" alt="Villa video frame 52"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0052.jpg" alt="Villa video frame 53"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0053.jpg" alt="Villa video frame 54"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0054.jpg" alt="Villa video frame 55"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0055.jpg" alt="Villa video frame 56"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0056.jpg" alt="Villa video frame 57"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0057.jpg" alt="Villa video frame 58"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0058.jpg" alt="Villa video frame 59"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0059.jpg" alt="Villa video frame 60"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0060.jpg" alt="Villa video frame 61"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0061.jpg" alt="Villa video frame 62"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0062.jpg" alt="Villa video frame 63"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0063.jpg" alt="Villa video frame 64"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0064.jpg" alt="Villa video frame 65"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0065.jpg" alt="Villa video frame 66"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0066.jpg" alt="Villa video frame 67"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0067.jpg" alt="Villa video frame 68"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0068.jpg" alt="Villa video frame 69"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0069.jpg" alt="Villa video frame 70"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0070.jpg" alt="Villa video frame 71"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0071.jpg" alt="Villa video frame 72"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0072.jpg" alt="Villa video frame 73"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0073.jpg" alt="Villa video frame 74"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0074.jpg" alt="Villa video frame 75"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0075.jpg" alt="Villa video frame 76"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0076.jpg" alt="Villa video frame 77"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0077.jpg" alt="Villa video frame 78"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0078.jpg" alt="Villa video frame 79"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0079.jpg" alt="Villa video frame 80"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0080.jpg" alt="Villa video frame 81"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0081.jpg" alt="Villa video frame 82"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0082.jpg" alt="Villa video frame 83"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0083.jpg" alt="Villa video frame 84"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0084.jpg" alt="Villa video frame 85"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0085.jpg" alt="Villa video frame 86"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0086.jpg" alt="Villa video frame 87"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0087.jpg" alt="Villa video frame 88"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0088.jpg" alt="Villa video frame 89"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0089.jpg" alt="Villa video frame 90"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0090.jpg" alt="Villa video frame 91"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0091.jpg" alt="Villa video frame 92"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0092.jpg" alt="Villa video frame 93"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0093.jpg" alt="Villa video frame 94"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0094.jpg" alt="Villa video frame 95"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0095.jpg" alt="Villa video frame 96"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0096.jpg" alt="Villa video frame 97"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0097.jpg" alt="Villa video frame 98"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0098.jpg" alt="Villa video frame 99"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0099.jpg" alt="Villa video frame 100"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0100.jpg" alt="Villa video frame 101"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0101.jpg" alt="Villa video frame 102"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0102.jpg" alt="Villa video frame 103"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0103.jpg" alt="Villa video frame 104"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0104.jpg" alt="Villa video frame 105"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0105.jpg" alt="Villa video frame 106"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0106.jpg" alt="Villa video frame 107"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0107.jpg" alt="Villa video frame 108"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0108.jpg" alt="Villa video frame 109"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0109.jpg" alt="Villa video frame 110"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0110.jpg" alt="Villa video frame 111"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0111.jpg" alt="Villa video frame 112"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0112.jpg" alt="Villa video frame 113"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0113.jpg" alt="Villa video frame 114"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0114.jpg" alt="Villa video frame 115"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0115.jpg" alt="Villa video frame 116"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0116.jpg" alt="Villa video frame 117"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0117.jpg" alt="Villa video frame 118"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0118.jpg" alt="Villa video frame 119"></figure>
+        <figure class="frame"><img loading="lazy" src="frames/frame_0119.jpg" alt="Villa video frame 120"></figure>
+    </main>
+</body>
+
+</html>

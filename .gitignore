@@ -1,0 +1,14 @@
+# Secrets & Credentials
+email_config.json
+.env
+.env.local
+
+# Local submissions & preview logs
+inquiries.json
+last_email_sent.html
+*.log
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,1 @@
+Smooth scrolling animation frame pack\nFrames: 120\nSource video: 10 seconds, 24 FPS\nExtracted: 12 FPS (every 2nd frame), resized to 960x540 JPEG.\n\nOpen index.html in a browser to view the scrolling animation.\n

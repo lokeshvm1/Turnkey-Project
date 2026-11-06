@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORMA ARCHITECTS — Architecture Studio</title>
+  <meta name="description"
+    content="Architecture shaped by light, form & purpose. Premium construction & architecture portfolio." />
+  <!-- Google Fonts: Bebas Neue, Syne, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Fixed Background Canvas for Construction Frame Animation -->
+  <canvas id="bg-canvas"></canvas>
+  <!-- 3D Spatial Architectural Depth Grid Canvas -->
+  <canvas id="spatial-canvas"></canvas>
+  <div class="canvas-overlay"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo" id="logo-btn">
+        <div class="logo-icon">
+          <span class="sq sq-1"></span>
+          <span class="sq sq-2"></span>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">FORMA</span>
+          <span class="brand-tag">ARCHITECTS</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active" id="nav-home">HOME</a>
+        <a href="#selected-work" class="nav-link" id="nav-projects">PROJECTS</a>
+        <a href="#about" class="nav-link" id="nav-about">ABOUT</a>
+        <a href="#studio" class="nav-link" id="nav-studio">STUDIO</a>
+        <a href="#journal" class="nav-link" id="nav-journal">JOURNAL</a>
+        <a href="#contact" class="nav-link" id="nav-contact">CONTACT</a>
+        <button class="menu-toggle" id="menu-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar">
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+
+  <!-- Main Scrollable Content Container -->
+  <main class="content-wrapper">
+    <!-- SECTION 1: HERO -->
+    <section class="section section-hero" id="hero" data-step="01">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="eyebrow-wrap">
+            <span class="eyebrow">ARCHITECTURE STUDIO</span>
+          </div>
+          <h1 class="hero-headline">SPACES<br />THAT SPEAK.</h1>
+          <p class="hero-subline">Architecture shaped by light, form &amp; purpose.</p>
+          <div class="hero-cta-wrap">
+            <button type="button" class="btn-primary" id="explore-btn" aria-haspopup="dialog" aria-controls="project-form-modal">
+              <span>EXPLORE PROJECTS</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <a href="#selected-work" class="btn-secondary" id="hero-showcase-btn">
+              <span>VIEW SHOWCASE</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 5v14M5 12l7 7 7-7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span>SCROLL TO CONSTRUCT</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: SELECTED WORK -->
+    <section class="section section-projects" id="selected-work" data-step="02">
+      <div class="section-container">
+        <!-- Section Bar -->
+        <div class="section-header-bar">
+          <div class="section-title-wrap">
+            <span class="section-tag">SELECTED WORK</span>
+            <div class="divider-line"></div>
+          </div>
+          <a href="#contact" class="view-all-link" id="view-all-btn">
+            <span>VIEW ALL PROJECTS</span>
+            <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Split Showcase: Cards on Left, Open View on Center & Right -->
+        <div class="projects-showcase-layout">
+          <!-- Left Column: Interactive Cards -->
+          <div class="projects-stack">
+            <!-- Card 1 -->
+            <article class="project-card active" data-index="0" data-location="SARAVANAMPATTI"
+              data-coords="13.0382° N, 80.1565° E" data-phase="STRUCTURAL ELEVATION &amp; SLAB CASTING"
+              data-progress="78%">
+              <div class="card-indicator-line"></div>
+              <div class="card-badge">
+                <span class="card-number">01</span>
+                <span class="card-tag">RESIDENTIAL</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">PRIVATE RESIDENCE</h3>
+                <p class="card-meta">2024 / SARAVANAMPATTI </p>
+                <div class="card-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">AREA</span>
+                    <span class="spec-val">12,500 SQ FT</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">STRUCTURE</span>
+                    <span class="spec-val">REINFORCED CONCRETE</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#contact" class="card-link">
+                  <span>EXPLORE PROJECT SPECIFICATION</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="project-card" data-index="1" data-location="RS PURAM" data-coords="11.0168° N, 76.9558° E"
+              data-phase="CANTILEVER FRAMEWORK &amp; GLAZING" data-progress="92%">
+              <div class="card-indicator-line"></div>
+              <div class="card-badge">
+                <span class="card-number">02</span>
+                <span class="card-tag">URBAN LIVING</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">URBAN HOUSE</h3>
+                <p class="card-meta">2025 / RS PURAM </p>
+                <div class="card-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">AREA</span>
+                    <span class="spec-val">8,200 SQ FT</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">STRUCTURE</span>
+                    <span class="spec-val">STEEL &amp; MONOLITHIC</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#contact" class="card-link">
+                  <span>EXPLORE PROJECT SPECIFICATION</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="project-card" data-index="2" data-location="PEELAMEDU" data-coords="11.8037° N, 77.8016° E"
+              data-phase="PARAMETRIC CONCH &amp; CIVIC PLAZA" data-progress="100%">
+              <div class="card-indicator-line"></div>
+              <div class="card-badge">
+                <span class="card-number">03</span>
+                <span class="card-tag">CIVIC &amp; CULTURAL</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">CULTURAL SPACE</h3>
+                <p class="card-meta">2021 / PEELAMEDU </p>
+                <div class="card-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">AREA</span>
+                    <span class="spec-val">45,000 SQ FT</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">STRUCTURE</span>
+                    <span class="spec-val">PARAMETRIC CONCH</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#contact" class="card-link">
+                  <span>EXPLORE PROJECT SPECIFICATION</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Floating Telemetry HUD Shifted to Left Side Down -->
+            <div class="stage-hud-card">
+              <div class="hud-header">
+                <span class="hud-pulse"></span>
+                <span class="hud-tag">LIVE FRAME PERSPECTIVE</span>
+                <span class="hud-progress-val" id="hud-progress">78%</span>
+              </div>
+              <div class="hud-meta-grid">
+                <div class="hud-item">
+                  <span class="hud-label">LOCATION</span>
+                  <span class="hud-val" id="hud-location">SARAVANAMPATTI</span>
+                </div>
+                <div class="hud-item">
+                  <span class="hud-label">COORDINATES</span>
+                  <span class="hud-val" id="hud-coords">13.0382° N, 80.1565° E</span>
+                </div>
+                <div class="hud-item full-span">
+                  <span class="hud-label">CURRENT PHASE</span>
+                  <span class="hud-val" id="hud-phase">STRUCTURAL ELEVATION &amp; SLAB CASTING</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center and Right Side: Wide Open Panoramic Animation Stage with Minimalist Reticles -->
+          <div class="projects-stage-viewport">
+            <!-- Architectural Corner Reticles -->
+            <span class="hud-reticle top-left">+</span>
+            <span class="hud-reticle top-right">+</span>
+            <span class="hud-reticle bottom-left">+</span>
+            <span class="hud-reticle bottom-right">+</span>
+
+            <!-- Architectural Compass / Scroll Prompt -->
+            <div class="stage-footer-cue">
+              <div class="cue-pill">
+                <span class="cue-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="9.5"/>
+                    <circle cx="12" cy="12" r="3.5"/>
+                    <line x1="12" y1="2.5" x2="12" y2="5.5"/>
+                    <line x1="12" y1="18.5" x2="12" y2="21.5"/>
+                    <line x1="2.5" y1="12" x2="5.5" y2="12"/>
+                    <line x1="18.5" y1="12" x2="21.5" y2="12"/>
+                  </svg>
+                </span>
+                <span class="cue-text">SCROLL TO INSPECT TIMELAPSE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: ABOUT (COMPANY PROFILE, METHODOLOGY & METRICS) -->
+    <section class="section section-about" id="about" data-step="03">
+      <div class="section-container">
+        <!-- Section Bar -->
+        <div class="section-header-bar">
+          <div class="section-title-wrap">
+            <span class="section-tag">03 / ABOUT COMPANY</span>
+            <div class="divider-line"></div>
+          </div>
+          <span class="section-badge-pill">EST. 2008 • TURNKEY ARCHITECTURE &amp; BUILD</span>
+        </div>
+
+        <div class="about-showcase-layout">
+          <!-- Left Column: All About Content Shifted to Left Side Down -->
+          <div class="about-left">
+            <div class="about-hero-block">
+              <div class="eyebrow-wrap">
+                <span class="eyebrow">ABOUT FORMA ARCHITECTS &amp; BUILDERS</span>
+              </div>
+              <h2 class="about-headline">ARCHITECTURAL VISION.<br /><span class="text-accent">ENGINEERED CERTAINTY.</span></h2>
+              <p class="about-lead">
+                FORMA is an award-winning integrated architectural studio and turnkey construction firm. For over 16 years, we have merged sculptural architectural elegance with precision structural engineering, delivering single-source turnkey luxury residences, urban homes, and civic landmarks across South India and internationally.
+              </p>
+            </div>
+
+            <!-- Deep Company Narrative Stack -->
+            <div class="about-narrative-stack">
+              <div class="narrative-card">
+                <div class="narrative-badge">01 / DESIGN PHILOSOPHY</div>
+                <h3 class="narrative-title">MONOLITHIC PURITY &amp; CLIMATIC HARMONY</h3>
+                <p>
+                  We believe architecture is an enduring sensory experience. Our projects reject superficial decoration in favor of authentic raw materials: fair-faced monolithic concrete, structural steel, locally quarried granite, and thermal low-iron glass. Each space is carefully sculpted to capture prevailing wind currents, choreograph natural daylight, and foster deep tranquility.
+                </p>
+                <p>
+                  By treating light as a primary building material, we create buildings that transform throughout the day, providing an ever-changing canvas of shadows, textures, and spatial warmth.
+                </p>
+              </div>
+
+              <div class="narrative-card">
+                <div class="narrative-badge">02 / TURNKEY SYNERGY</div>
+                <h3 class="narrative-title">UNIFIED DESIGN-BUILD EXECUTION</h3>
+                <p>
+                  Traditional construction is fractured between architects who don't construct and contractors who don't understand architectural vision. This disjoint causes budget escalations, design dilution, and timeline delays.
+                </p>
+                <p>
+                  FORMA eliminates this gap. Our single-entity turnkey model integrates architectural design, structural engineering, statutory approvals, procurement, civil execution, MEP engineering, and interior bespoke joinery under a single accountable contract with guaranteed timelines and transparent pricing.
+                </p>
+              </div>
+            </div>
+
+            <!-- Key Company Metrics Stack -->
+            <div class="about-stats-stack">
+              <div class="stat-card">
+                <div class="stat-number">16<span class="stat-unit">+</span></div>
+                <div class="stat-title">YEARS OF PRACTICE</div>
+                <p class="stat-desc">Established in 2008 with a legacy of timeless residential &amp; civic landmarks.</p>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-number">250<span class="stat-unit">+</span></div>
+                <div class="stat-title">TURNKEY PROJECTS</div>
+                <p class="stat-desc">Bespoke luxury villas, modern urban homes, and corporate headquarters.</p>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-number">4.2<span class="stat-unit">M</span></div>
+                <div class="stat-title">SQ FT CONSTRUCTED</div>
+                <p class="stat-desc">Executed with millimeter precision and zero structural safety compromises.</p>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-number">100<span class="stat-unit">%</span></div>
+                <div class="stat-title">IN-HOUSE ACCOUNTABILITY</div>
+                <p class="stat-desc">Single-source delivery covering architectural planning, civil, MEP, and interiors.</p>
+              </div>
+            </div>
+
+            <!-- Turnkey Execution Lifecycle (6 Steps) -->
+            <div class="about-lifecycle-wrap">
+              <div class="sub-header-bar">
+                <h3 class="sub-headline">THE FORMA TURNKEY METHODOLOGY</h3>
+                <span class="sub-tag">6-PHASE PRECISION BLUEPRINT</span>
+              </div>
+
+              <div class="lifecycle-steps-stack">
+                <div class="step-card">
+                  <span class="step-idx">PHASE 01</span>
+                  <h4 class="step-name">SITE FEASIBILITY &amp; SURVEY</h4>
+                  <p>Topographical drone mapping, soil mechanics analysis, solar path tracking, and zoning legal scrutiny.</p>
+                </div>
+                <div class="step-card">
+                  <span class="step-idx">PHASE 02</span>
+                  <h4 class="step-name">PARAMETRIC ARCHITECTURAL DESIGN</h4>
+                  <p>Computational massing, spatial choreography, daylighting simulations, and 3D architectural renders.</p>
+                </div>
+                <div class="step-card">
+                  <span class="step-idx">PHASE 03</span>
+                  <h4 class="step-name">5D BIM &amp; STATUTORY APPROVALS</h4>
+                  <p>Complete structural detailing, MEP collision detection, municipal sanctions, and transparent Bill of Quantities.</p>
+                </div>
+                <div class="step-card">
+                  <span class="step-idx">PHASE 04</span>
+                  <h4 class="step-name">CIVIL &amp; STRUCTURAL CASTING</h4>
+                  <p>Engineered deep foundation, seismic-resistant framework, monolithic fair-faced slab casting, and rigorous QA cube tests.</p>
+                </div>
+                <div class="step-card">
+                  <span class="step-idx">PHASE 05</span>
+                  <h4 class="step-name">FACADE &amp; MEP INTEGRATION</h4>
+                  <p>High-performance thermal glazing, VRV climate systems, acoustic insulation, and smart automation conduits.</p>
+                </div>
+                <div class="step-card">
+                  <span class="step-idx">PHASE 06</span>
+                  <h4 class="step-name">BESPOKE INTERIORS &amp; HANDOVER</h4>
+                  <p>Architectural millwork, custom stone finishes, zero-defect audit, and turnkey keys handover with full warranties.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Open Panoramic Viewport on Center & Right -->
+          <div class="about-stage-viewport">
+            <span class="hud-reticle top-left">+</span>
+            <span class="hud-reticle top-right">+</span>
+            <span class="hud-reticle bottom-left">+</span>
+            <span class="hud-reticle bottom-right">+</span>
+
+            <div class="stage-footer-cue">
+              <div class="cue-pill">
+                <span class="cue-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="9.5"/>
+                    <circle cx="12" cy="12" r="3.5"/>
+                    <line x1="12" y1="2.5" x2="12" y2="5.5"/>
+                    <line x1="12" y1="18.5" x2="12" y2="21.5"/>
+                    <line x1="2.5" y1="12" x2="5.5" y2="12"/>
+                    <line x1="18.5" y1="12" x2="21.5" y2="12"/>
+                  </svg>
+                </span>
+                <span class="cue-text">FORMA ARCHITECTURAL PRACTICE PERSPECTIVE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: STUDIO (ATELIERS, DISCIPLINES & TEAM) -->
+    <section class="section section-studio" id="studio" data-step="04">
+      <div class="section-container">
+        <!-- Section Bar -->
+        <div class="section-header-bar">
+          <div class="section-title-wrap">
+            <span class="section-tag">04 / THE STUDIO</span>
+            <div class="divider-line"></div>
+          </div>
+          <span class="section-badge-pill">MULTIDISCIPLINARY ATELIER</span>
+        </div>
+
+        <div class="studio-showcase-layout">
+          <!-- Left Column: All Studio Content Shifted to Left Side Down -->
+          <div class="studio-left">
+            <div class="studio-hero-block">
+              <div class="eyebrow-wrap">
+                <span class="eyebrow">OUR PRACTICE &amp; WORKSPACES</span>
+              </div>
+              <h2 class="studio-headline">WHERE CONCEPTS<br /><span class="text-accent">MATERIALIZE.</span></h2>
+              <p class="studio-lead">
+                FORMA operates three specialized design and engineering ateliers across South India. Our studios serve as collaborative workshops where architects, computational designers, structural engineers, and master builders work side-by-side.
+              </p>
+            </div>
+
+            <!-- Atelier Locations Stack -->
+            <div class="ateliers-stack">
+              <!-- Atelier 1 -->
+              <article class="atelier-card">
+                <div class="atelier-badge">HEADQUARTERS &amp; HEAVY LAB</div>
+                <h3 class="atelier-name">COIMBATORE PRINCIPAL ATELIER</h3>
+                <p class="atelier-loc">FORMA TOWER, AVINASHI ROAD, PEELAMEDU</p>
+                <p class="atelier-desc">
+                  Our primary design studio, 1:50 physical scale modeling workshop, and material R&amp;D laboratory. Houses our principal architects and heavy civil engineering directors overseeing regional turnkey villas and cultural projects.
+                </p>
+                <div class="atelier-specs">
+                  <div class="a-spec"><span class="lbl">FOCUS</span><span class="val">Residential Turnkey &amp; Structural R&amp;D</span></div>
+                  <div class="a-spec"><span class="lbl">TEAM</span><span class="val">38 Architects &amp; Engineers</span></div>
+                </div>
+              </article>
+
+              <!-- Atelier 2 -->
+              <article class="atelier-card">
+                <div class="atelier-badge">COASTAL &amp; COMMERCIAL</div>
+                <h3 class="atelier-name">CHENNAI URBAN ATELIER</h3>
+                <p class="atelier-loc">14 POES GARDEN ROAD, ALWARPET</p>
+                <p class="atelier-desc">
+                  Dedicated to high-density urban living, coastal corrosion-resistant structural design, corporate headquarters, and high-performance glass curtain wall prototyping.
+                </p>
+                <div class="atelier-specs">
+                  <div class="a-spec"><span class="lbl">FOCUS</span><span class="val">Urban Architecture &amp; Corporate Turnkey</span></div>
+                  <div class="a-spec"><span class="lbl">TEAM</span><span class="val">24 Architects &amp; Project Managers</span></div>
+                </div>
+              </article>
+
+              <!-- Atelier 3 -->
+              <article class="atelier-card">
+                <div class="atelier-badge">COMPUTATIONAL &amp; BIM LAB</div>
+                <h3 class="atelier-name">BENGALURU COMPUTATIONAL LAB</h3>
+                <p class="atelier-loc">100 FT ROAD, INDIRANAGAR</p>
+                <p class="atelier-desc">
+                  Our technology wing focusing on parametric algorithmic geometry, 5D BIM digital twins, daylight simulation engines, and smart home IoT automation integration.
+                </p>
+                <div class="atelier-specs">
+                  <div class="a-spec"><span class="lbl">FOCUS</span><span class="val">BIM 5D &amp; Parametric Systems</span></div>
+                  <div class="a-spec"><span class="lbl">TEAM</span><span class="val">18 Computational Specialists</span></div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Studio Practice Pillars Stack -->
+            <div class="studio-facets-stack">
+              <div class="facet-card">
+                <div class="facet-icon" aria-label="Physical Model Making">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 21V4a1 1 0 0 1 1.7-.7l16 16A1 1 0 0 1 20 21H3z"/>
+                    <path d="M7 17h6l-6-6v6z"/>
+                    <line x1="7" y1="21" x2="7" y2="18.5"/>
+                    <line x1="11" y1="21" x2="11" y2="18.5"/>
+                    <line x1="15" y1="21" x2="15" y2="18.5"/>
+                    <line x1="3" y1="13" x2="5.5" y2="13"/>
+                    <line x1="3" y1="9" x2="5.5" y2="9"/>
+                  </svg>
+                </div>
+                <h4 class="facet-title">PHYSICAL MODEL MAKING</h4>
+                <p>Every concept is tested in our physical model shop using laser-cut acrylic, brass, and basswood to examine spatial volume and shadow behavior.</p>
+              </div>
+              <div class="facet-card">
+                <div class="facet-icon" aria-label="Raw Material Archive">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                    <polyline points="2 12 12 17 22 12"/>
+                    <polyline points="2 17 12 22 22 17"/>
+                    <line x1="12" y1="2" x2="12" y2="22" stroke-dasharray="2 2" stroke-width="1.2"/>
+                  </svg>
+                </div>
+                <h4 class="facet-title">RAW MATERIAL ARCHIVE</h4>
+                <p>Over 800 curated samples of fair-faced concrete mixes, volcanic stones, aged metals, and timber finishes tested for weathering performance.</p>
+              </div>
+              <div class="facet-card">
+                <div class="facet-icon" aria-label="Immersive VR Testing">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 8a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-3l-2.2-2.2a1.2 1.2 0 0 0-1.6 0L10 18H6a3 3 0 0 1-3-3V8z"/>
+                    <circle cx="8.5" cy="11.5" r="2"/>
+                    <circle cx="15.5" cy="11.5" r="2"/>
+                    <path d="M7 5V3.5A1.5 1.5 0 0 1 8.5 2h7A1.5 1.5 0 0 1 17 3.5V5"/>
+                  </svg>
+                </div>
+                <h4 class="facet-title">IMMERSIVE VR TESTING</h4>
+                <p>Clients experience their project at true 1:1 scale in our virtual spatial simulation room prior to pouring a single cubic meter of foundation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Open Panoramic Viewport on Center & Right -->
+          <div class="studio-stage-viewport">
+            <span class="hud-reticle top-left">+</span>
+            <span class="hud-reticle top-right">+</span>
+            <span class="hud-reticle bottom-left">+</span>
+            <span class="hud-reticle bottom-right">+</span>
+
+            <div class="stage-footer-cue">
+              <div class="cue-pill">
+                <span class="cue-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="9.5"/>
+                    <circle cx="12" cy="12" r="3.5"/>
+                    <line x1="12" y1="2.5" x2="12" y2="5.5"/>
+                    <line x1="12" y1="18.5" x2="12" y2="21.5"/>
+                    <line x1="2.5" y1="12" x2="5.5" y2="12"/>
+                    <line x1="18.5" y1="12" x2="21.5" y2="12"/>
+                  </svg>
+                </span>
+                <span class="cue-text">FORMA SPATIAL WORKSHOPS &amp; RESEARCH VIEWPORT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: JOURNAL (ARTICLES, DISPATCHES & RESEARCH) -->
+    <section class="section section-journal" id="journal" data-step="05">
+      <div class="section-container">
+        <!-- Section Bar -->
+        <div class="section-header-bar">
+          <div class="section-title-wrap">
+            <span class="section-tag">05 / JOURNAL &amp; RESEARCH</span>
+            <div class="divider-line"></div>
+          </div>
+          <span class="section-badge-pill">ARCHITECTURAL DISCOURSE</span>
+        </div>
+
+        <div class="journal-showcase-layout">
+          <!-- Left Column: All Journal Articles Shifted to Left Side Down -->
+          <div class="journal-left">
+            <div class="journal-hero-block">
+              <div class="eyebrow-wrap">
+                <span class="eyebrow">ESSAYS, FIELD DISPATCHES &amp; CASE STUDIES</span>
+              </div>
+              <h2 class="journal-headline">THOUGHTS ON FORM,<br /><span class="text-accent">GRAVITY &amp; TIME.</span></h2>
+              <p class="journal-lead">
+                Curated technical monographs, construction timelapse field notes, and sustainable design research published by our principal partners and site directors.
+              </p>
+            </div>
+
+            <!-- Articles Stack -->
+            <div class="journal-stack">
+              <!-- Article 1 -->
+              <article class="journal-card">
+                <div class="j-header">
+                  <span class="j-tag">MONOGRAPH / STRUCTURAL</span>
+                  <span class="j-date">OCTOBER 2024 • 8 MIN READ</span>
+                </div>
+                <h3 class="j-title">The Physics of Monolithic Cantilever Slabs in Tropical Climates</h3>
+                <p class="j-excerpt">
+                  An engineering deep-dive into fair-faced post-tensioned concrete slabs, mitigating thermal expansion micro-fractures, and achieving a 14-meter unsupported overhang in high-humidity zones.
+                </p>
+                <div class="j-footer">
+                  <a href="#selected-work" class="j-link">
+                    <span>INSPECT CASE RETROSPECTIVE</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Article 2 -->
+              <article class="journal-card">
+                <div class="j-header">
+                  <span class="j-tag">CONSTRUCTION METHODOLOGY</span>
+                  <span class="j-date">AUGUST 2024 • 6 MIN READ</span>
+                </div>
+                <h3 class="j-title">Eliminating Budget Surprises: How 5D BIM Drives Turnkey Cost Certainty</h3>
+                <p class="j-excerpt">
+                  How linking parametric geometry with real-time material pricing databases enables exact cost predictability and eliminates post-contract price creep.
+                </p>
+                <div class="j-footer">
+                  <a href="#about" class="j-link">
+                    <span>READ TURNKEY PROTOCOL</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Article 3 -->
+              <article class="journal-card">
+                <div class="j-header">
+                  <span class="j-tag">SUSTAINABLE ARCHITECTURE</span>
+                  <span class="j-date">JULY 2024 • 10 MIN READ</span>
+                </div>
+                <h3 class="j-title">Passive Thermal Mass: Slashing Residential Cooling Loads by 42%</h3>
+                <p class="j-excerpt">
+                  Utilizing high-density rammed earth walls, cavity insulation, and wind-scoop courtyards to sustain comfortable 24°C interior microclimates without artificial air conditioning.
+                </p>
+                <div class="j-footer">
+                  <a href="#selected-work" class="j-link">
+                    <span>VIEW SUSTAINABILITY DATA</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Article 4 -->
+              <article class="journal-card">
+                <div class="j-header">
+                  <span class="j-tag">FIELD TIMELAPSE LOG</span>
+                  <span class="j-date">MAY 2024 • 12 MIN READ</span>
+                </div>
+                <h3 class="j-title">From Excavation to Handover: Anatomy of a 14-Month Turnkey Residence</h3>
+                <p class="j-excerpt">
+                  A comprehensive timeline journal detailing day-by-day site milestones of the 12,500 sq ft Saravanampatti private estate from first earth moving to client key handover.
+                </p>
+                <div class="j-footer">
+                  <a href="#selected-work" class="j-link">
+                    <span>VIEW TIMELAPSE TIMELINE</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Open Panoramic Viewport on Center & Right -->
+          <div class="journal-stage-viewport">
+            <span class="hud-reticle top-left">+</span>
+            <span class="hud-reticle top-right">+</span>
+            <span class="hud-reticle bottom-left">+</span>
+            <span class="hud-reticle bottom-right">+</span>
+
+            <div class="stage-footer-cue">
+              <div class="cue-pill">
+                <span class="cue-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="9.5"/>
+                    <circle cx="12" cy="12" r="3.5"/>
+                    <line x1="12" y1="2.5" x2="12" y2="5.5"/>
+                    <line x1="12" y1="18.5" x2="12" y2="21.5"/>
+                    <line x1="2.5" y1="12" x2="5.5" y2="12"/>
+                    <line x1="18.5" y1="12" x2="21.5" y2="12"/>
+                  </svg>
+                </span>
+                <span class="cue-text">FORMA ARCHITECTURAL MONOGRAPHS VIEWPORT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONTACT (COMMISSION, ATELIERS & INQUIRY) -->
+    <section class="section section-contact" id="contact" data-step="06">
+      <div class="section-container">
+        <!-- Section Bar -->
+        <div class="section-header-bar">
+          <div class="section-title-wrap">
+            <span class="section-tag">06 / CONTACT &amp; COMMISSION</span>
+            <div class="divider-line"></div>
+          </div>
+          <span class="section-badge-pill">CONSULTATION BOOKINGS OPEN</span>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Left Column: All contact content & offices details shifted to left side down -->
+          <div class="contact-left">
+            <div class="contact-header-block">
+              <div class="eyebrow-wrap">
+                <span class="eyebrow">READY TO BUILD?</span>
+              </div>
+              <h2 class="contact-headline">LET'S BUILD<br />SOMETHING<br /><span class="text-accent">TIMELESS.</span></h2>
+              <p class="contact-sub">
+                Whether you are planning a bespoke private residence, an urban mansion, or a commercial development, our principal architectural and turnkey teams are ready to discuss your site parameters and project vision.
+              </p>
+              
+              <div class="contact-cta-buttons">
+                <button type="button" class="btn-primary" id="cta-contact-btn">
+                  <span>START A TURNKEY PROJECT</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=919840012345&text=Hello%20FORMA%20Architects,%20I%20would%20like%20to%20schedule%20an%20architectural%20consultation." target="_blank" rel="noopener" class="btn-whatsapp">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                  </svg>
+                  <span>DIRECT WHATSAPP DESK</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Studio Offices Card Shifted to Left Side Down -->
+            <div class="offices-telemetry-box" id="offices-telemetry-box">
+              <div class="office-entry">
+                <span class="office-tag">PRINCIPAL ATELIER (COIMBATORE)</span>
+                <h4 class="office-name">FORMA STUDIOS HEADQUARTERS</h4>
+                <p class="office-address">Level 4, FORMA Tower, Avinashi Road, Peelamedu, Coimbatore 641004</p>
+                <div class="office-contacts">
+                  <a href="tel:+919840012345" class="o-link">+91 98400 12345</a>
+                  <span class="o-sep">•</span>
+                  <a href="mailto:coimbatore@forma.studio" class="o-link">coimbatore@forma.studio</a>
+                </div>
+              </div>
+
+              <div class="office-entry">
+                <span class="office-tag">CHENNAI ATELIER</span>
+                <h4 class="office-name">COASTAL &amp; COMMERCIAL DESIGN WING</h4>
+                <p class="office-address">14 Poes Garden Road, Alwarpet, Chennai 600018</p>
+                <div class="office-contacts">
+                  <a href="tel:+914447209100" class="o-link">+91 (44) 4720-9100</a>
+                  <span class="o-sep">•</span>
+                  <a href="mailto:chennai@forma.studio" class="o-link">chennai@forma.studio</a>
+                </div>
+              </div>
+
+              <div class="office-entry">
+                <span class="office-tag">BENGALURU ATELIER</span>
+                <h4 class="office-name">COMPUTATIONAL BIM &amp; AUTOMATION LAB</h4>
+                <p class="office-address">42 Silicon Vista, 100 Ft Road, Indiranagar, Bengaluru 560038</p>
+                <div class="office-contacts">
+                  <a href="tel:+918061923500" class="o-link">+91 (80) 6192-3500</a>
+                  <span class="o-sep">•</span>
+                  <a href="mailto:bengaluru@forma.studio" class="o-link">bengaluru@forma.studio</a>
+                </div>
+              </div>
+
+              <div class="office-meta-bar">
+                <div class="meta-col">
+                  <span class="m-lbl">CONSULTATION HOURS</span>
+                  <span class="m-val">MON — SAT : 09:00 — 19:00 IST</span>
+                </div>
+                <div class="meta-col">
+                  <span class="m-lbl">SITE SURVEYS</span>
+                  <span class="m-val">BY APPOINTMENT WORLDWIDE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Open Panoramic Viewport on Center & Right (Unobstructed view of the background building) -->
+          <div class="contact-stage-viewport">
+            <span class="hud-reticle top-left">+</span>
+            <span class="hud-reticle top-right">+</span>
+            <span class="hud-reticle bottom-left">+</span>
+            <span class="hud-reticle bottom-right">+</span>
+
+            <div class="stage-footer-cue">
+              <div class="cue-pill">
+                <span class="cue-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="9.5"/>
+                    <circle cx="12" cy="12" r="3.5"/>
+                    <line x1="12" y1="2.5" x2="12" y2="5.5"/>
+                    <line x1="12" y1="18.5" x2="12" y2="21.5"/>
+                    <line x1="2.5" y1="12" x2="5.5" y2="12"/>
+                    <line x1="18.5" y1="12" x2="21.5" y2="12"/>
+                  </svg>
+                </span>
+                <span class="cue-text">FORMA ARCHITECTURAL ELEVATION PERSPECTIVE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FULL-SCREEN ARCHITECTURAL PROJECT ENQUIRY & TURNKEY REQUIREMENTS MODAL -->
+  <div class="project-form-modal" id="project-form-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+    <div class="form-modal-backdrop" id="form-modal-backdrop"></div>
+    <div class="form-modal-container">
+      <div class="form-modal-header">
+        <div class="modal-title-group">
+          <div class="modal-badge-row">
+            <span class="eyebrow">EXPLORE PROJECTS</span>
+            <span class="modal-pill-tag">TURNKEY BRIEF</span>
+          </div>
+          <h2 class="modal-headline" id="modal-headline">PROJECT ENQUIRY &amp; TURNKEY REQUIREMENTS</h2>
+          <p class="modal-sub">
+            Share your project location, dimensions, and turnkey construction requirements. Our principal architects &amp; structural engineers will review your specifications and provide a preliminary feasibility brief and turnkey estimate.
+          </p>
+        </div>
+        <button type="button" class="btn-close-form" id="btn-close-form" aria-label="Close Project Requirements Form">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M18 6L6 18M6 6l12 12" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>CLOSE [ESC]</span>
+        </button>
+      </div>
+
+      <form class="architectural-form" id="requirements-form" autocomplete="on">
+        <div class="form-grid">
+          <!-- Client / Contact Name -->
+          <div class="form-field">
+            <label for="client-name">
+              <span class="label-text">CLIENT NAME / ENTITY *</span>
+              <span class="label-badge">REQUIRED</span>
+            </label>
+            <div class="input-with-icon">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke-width="1.6"/>
+                <circle cx="12" cy="7" r="4" stroke-width="1.6"/>
+              </svg>
+              <input type="text" id="client-name" name="name" required placeholder="e.g. Rajesh Kumar / Sterling Developers" />
+            </div>
+          </div>
+
+          <!-- Contact Number -->
+          <div class="form-field">
+            <label for="client-phone">
+              <span class="label-text">CONTACT NUMBER / WHATSAPP *</span>
+              <span class="label-badge">REQUIRED</span>
+            </label>
+            <div class="input-with-icon">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-width="1.6"/>
+              </svg>
+              <input type="tel" id="client-phone" name="phone" required placeholder="e.g. +91 98400 12345" />
+            </div>
+          </div>
+
+          <!-- Site Location -->
+          <div class="form-field">
+            <label for="project-location">
+              <span class="label-text">SITE / PROJECT LOCATION *</span>
+              <span class="label-badge">REQUIRED</span>
+            </label>
+            <div class="input-with-icon">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-width="1.6"/>
+                <circle cx="12" cy="10" r="3" stroke-width="1.6"/>
+              </svg>
+              <input type="text" id="project-location" name="location" required placeholder="e.g. Saravanampatti, Coimbatore / Chennai / Bengaluru" />
+            </div>
+            <div class="quick-chips" data-target="project-location">
+              <span class="chip-label">Quick select:</span>
+              <button type="button" class="quick-chip" data-val="Saravanampatti, Coimbatore">Coimbatore</button>
+              <button type="button" class="quick-chip" data-val="Porur, Chennai">Chennai</button>
+              <button type="button" class="quick-chip" data-val="Whitefield, Bengaluru">Bengaluru</button>
+              <button type="button" class="quick-chip" data-val="Kochi, Kerala">Kochi</button>
+            </div>
+          </div>
+
+          <!-- Area in Sq Feet -->
+          <div class="form-field">
+            <label for="project-area">
+              <span class="label-text">BUILT-UP / PLOT AREA (SQ FEET) *</span>
+              <span class="label-badge">REQUIRED</span>
+            </label>
+            <div class="input-with-icon">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3" y="3" width="18" height="18" rx="2" stroke-width="1.6"/>
+                <path d="M3 9h18M9 21V9" stroke-width="1.6"/>
+              </svg>
+              <input type="number" id="project-area" name="area" min="100" step="50" required placeholder="e.g. 5,000" />
+            </div>
+            <div class="quick-chips" data-target="project-area">
+              <span class="chip-label">Presets:</span>
+              <button type="button" class="quick-chip" data-val="2500">2,500 sq ft</button>
+              <button type="button" class="quick-chip" data-val="5000">5,000 sq ft</button>
+              <button type="button" class="quick-chip" data-val="8500">8,500 sq ft</button>
+              <button type="button" class="quick-chip" data-val="12500">12,500 sq ft</button>
+              <button type="button" class="quick-chip" data-val="25000">25,000+ sq ft</button>
+            </div>
+          </div>
+
+          <!-- Turnkey Scope / Classification -->
+          <div class="form-field">
+            <label for="turnkey-scope">
+              <span class="label-text">TURNKEY SERVICE SCOPE *</span>
+              <span class="label-badge">REQUIRED</span>
+            </label>
+            <div class="input-with-icon select-wrap">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke-width="1.6"/>
+              </svg>
+              <select id="turnkey-scope" name="turnkey_scope" required>
+                <option value="" disabled selected>Select Turnkey Solution</option>
+                <option value="Complete Turnkey (Design + Civil + Interiors + Handover)">Complete Turnkey (Design + Civil + Interiors + Handover)</option>
+                <option value="Civil & Structural Turnkey Execution">Civil &amp; Structural Turnkey Execution (Foundation to Roof)</option>
+                <option value="Luxury Villa / Residential Turnkey">Luxury Villa / Private Residence Turnkey</option>
+                <option value="Commercial & Office Space Turnkey">Commercial &amp; Corporate Office Turnkey</option>
+                <option value="Interior Turnkey & MEP Fit-Outs">Interior Turnkey &amp; MEP Fit-Outs</option>
+                <option value="Turnkey Renovation & Structural Remodeling">Turnkey Renovation &amp; Remodeling</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Building Type / Floors Configuration -->
+          <div class="form-field">
+            <label for="project-structure">
+              <span class="label-text">STRUCTURE / FLOOR CONFIGURATION</span>
+              <span class="label-optional">OPTIONAL</span>
+            </label>
+            <div class="input-with-icon select-wrap">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4" stroke-width="1.6"/>
+                <path d="M9 9v.01M9 13v.01M9 17v.01" stroke-width="1.6"/>
+              </svg>
+              <select id="project-structure" name="structure">
+                <option value="Ground Floor Only">Ground Floor (Single Level)</option>
+                <option value="G+1 Duplex / Villa" selected>G+1 Duplex / Luxury Villa</option>
+                <option value="G+2 / G+3 Independent Residence">G+2 / G+3 Independent Residence</option>
+                <option value="Multi-Story Commercial / Apartment">Multi-Story Commercial / Apartment</option>
+                <option value="Industrial / Warehouse / Studio">Industrial / Warehouse / Studio Frame</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Email Address (Optional for PDF Report) -->
+          <div class="form-field">
+            <label for="client-email">
+              <span class="label-text">EMAIL ADDRESS</span>
+              <span class="label-optional">FOR PDF ESTIMATE</span>
+            </label>
+            <div class="input-with-icon">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="1.6"/>
+                <polyline points="22,6 12,13 2,6" stroke-width="1.6"/>
+              </svg>
+              <input type="email" id="client-email" name="email" placeholder="client@domain.com" />
+            </div>
+          </div>
+
+          <!-- Target Timeline -->
+          <div class="form-field">
+            <label for="project-timeline">
+              <span class="label-text">TARGET COMMENCEMENT TIMELINE</span>
+              <span class="label-optional">OPTIONAL</span>
+            </label>
+            <div class="input-with-icon select-wrap">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" stroke-width="1.6"/>
+                <polyline points="12 6 12 12 16 14" stroke-width="1.6"/>
+              </svg>
+              <select id="project-timeline" name="timeline">
+                <option value="Immediate">Immediate (Ready to Break Ground)</option>
+                <option value="1-3 Months" selected>Within 1 to 3 Months</option>
+                <option value="3-6 Months">3 to 6 Months (Planning &amp; Permissions)</option>
+                <option value="Feasibility Study">Feasibility Study / Exploratory Phase</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Basic Details About Turnkey Requirements (Textarea) -->
+          <div class="form-field full-width">
+            <label for="turnkey-details">
+              <span class="label-text">BASIC DETAILS ABOUT TURNKEY REQUIREMENTS *</span>
+              <span class="label-badge">REQUIRED</span>
+            </label>
+            <textarea id="turnkey-details" name="turnkey_details" rows="4" required placeholder="Describe your turnkey requirements: e.g. number of floors/bedrooms, architectural style (minimalist, modern, brutalist), preferred materials, plot status (vacant land, existing structure to demolish), special amenities like swimming pool, basement, elevator, solar roofing, etc..."></textarea>
+            <div class="field-hint">
+              <span>Specify any architectural or construction preferences: framing material, luxury grade finishes, landscaping, or smart automation.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary btn-submit-inquiry" id="btn-submit-inquiry">
+            <span>SUBMIT TURNKEY ENQUIRY</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <a href="#" class="btn-whatsapp" id="btn-whatsapp-inquiry" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            <span>WHATSAPP INSTANT ENQUIRY</span>
+          </a>
+
+          <span class="form-privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="lock-icon">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke-width="1.8"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke-width="1.8"/>
+            </svg>
+            Strict architectural confidentiality assured under NDA.
+          </span>
+        </div>
+
+        <!-- Success Confirmation State with Detailed Submitted Brief Breakdown -->
+        <div class="form-success-message" id="form-success-message">
+          <div class="success-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <div class="success-text">
+            <h3>TURNKEY ENQUIRY TRANSMITTED</h3>
+            <p class="success-sub">
+              Thank you. Our Principal Turnkey Architect has received your project parameters and will contact you via phone/WhatsApp within 24 hours.
+            </p>
+
+            <div class="submitted-brief-card" id="submitted-brief-summary">
+              <div class="brief-header">
+                <span class="brief-title">RECORDED SPECIFICATION BRIEF</span>
+                <span class="brief-ref" id="summary-ref">REF: #FORMA-TK-2026</span>
+              </div>
+              <div class="brief-grid">
+                <div class="brief-item">
+                  <span class="b-label">CLIENT</span>
+                  <span class="b-val" id="summary-name">—</span>
+                </div>
+                <div class="brief-item">
+                  <span class="b-label">CONTACT NUMBER</span>
+                  <span class="b-val" id="summary-phone">—</span>
+                </div>
+                <div class="brief-item">
+                  <span class="b-label">SITE LOCATION</span>
+                  <span class="b-val" id="summary-location">—</span>
+                </div>
+                <div class="brief-item">
+                  <span class="b-label">AREA (SQ FT)</span>
+                  <span class="b-val" id="summary-area">—</span>
+                </div>
+                <div class="brief-item full">
+                  <span class="b-label">TURNKEY SCOPE</span>
+                  <span class="b-val" id="summary-scope">—</span>
+                </div>
+                <div class="brief-item full">
+                  <span class="b-label">TURNKEY REQUIREMENTS DETAILS</span>
+                  <span class="b-val" id="summary-details">—</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="success-actions">
+              <button type="button" class="btn-primary" id="btn-success-close">
+                <span>RETURN TO SHOWCASE</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="16" height="16">
+                  <path d="M5 12h14M12 5l7 7-7 7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="btn-secondary" id="btn-success-new">
+                <span>SUBMIT ANOTHER BRIEF</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Architectural Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>&copy; 2024 FORMA ARCHITECTS. ALL RIGHTS RESERVED.</p>
+      </div>
+      <div class="footer-center">
+        <a href="#" class="social-link">INSTAGRAM</a>
+        <span class="footer-sep">|</span>
+        <a href="#" class="social-link">LINKEDIN</a>
+        <span class="footer-sep">|</span>
+        <a href="#" class="social-link">PINTEREST</a>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:info@forma.studio" class="footer-email">INFO@FORMA.STUDIO</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 3D Architectural Spatial Coordinate Compass HUD -->
+  <aside class="spatial-3d-hud" id="spatial-3d-hud" aria-label="3D Spatial Elevation HUD">
+    <div class="cube-3d-viewport">
+      <div class="cube-3d-scene">
+        <div class="cube-3d" id="cube-3d">
+          <div class="cube-face cube-front"><span>01</span><small>FRONT</small></div>
+          <div class="cube-face cube-back"><span>02</span><small>REAR</small></div>
+          <div class="cube-face cube-right"><span>03</span><small>EAST</small></div>
+          <div class="cube-face cube-left"><span>04</span><small>WEST</small></div>
+          <div class="cube-face cube-top"><span>Z+</span><small>ROOF</small></div>
+          <div class="cube-face cube-bottom"><span>Z-</span><small>BASE</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="spatial-telemetry">
+      <div class="telemetry-row">
+        <span class="telemetry-label">3D ELEVATION</span>
+        <span class="telemetry-val" id="spatial-elevation">+0.00m</span>
+      </div>
+      <div class="telemetry-row">
+        <span class="telemetry-label">AXIS PITCH</span>
+        <span class="telemetry-val" id="spatial-pitch">0° / 360°</span>
+      </div>
+      <div class="telemetry-row">
+        <span class="telemetry-label">SPATIAL SECTOR</span>
+        <span class="telemetry-val highlight" id="spatial-sector">01 FOUNDATION</span>
+      </div>
+      <div class="telemetry-bar">
+        <div class="telemetry-fill" id="spatial-fill"></div>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js?v=2.5"></script>
+</body>
+
+</html>

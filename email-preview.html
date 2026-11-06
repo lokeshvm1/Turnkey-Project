@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMA ARCHITECTS — Luxury Email Template Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #c5bbb0;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.45), transparent 60%),
+        linear-gradient(180deg, #d8cec3 0%, #c1b6aa 100%);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .showcase-header {
+      text-align: center;
+      margin-bottom: 35px;
+      max-width: 800px;
+    }
+    .showcase-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      color: #4a453f;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .showcase-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: #1a1816;
+      text-transform: uppercase;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .showcase-sub {
+      font-size: 0.95rem;
+      color: #555049;
+      letter-spacing: 0.05em;
+    }
+
+    .top-toolbar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .toolbar-btn {
+      padding: 10px 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 999px;
+      color: #1a1816;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(10px);
+    }
+    .toolbar-btn:hover, .toolbar-btn.active {
+      background: #111215;
+      color: #ffffff;
+      border-color: #111215;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    /* EMAIL CONTAINER MOCKUP */
+    .email-wrapper {
+      width: 100%;
+      max-width: 620px;
+      background: #090a0d;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 
+        0 25px 60px -15px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(0, 0, 0, 0.2);
+    }
+
+    /* EMAIL TEMPLATE TABLE STYLES (Exact inline-friendly code) */
+    .email-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #090a0d;
+      color: #ffffff;
+      font-family: 'Inter', Helvetica, Arial, sans-serif;
+    }
+
+    .email-top-bar {
+      padding: 24px 28px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: #0e1014;
+    }
+    .email-brand {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+    .email-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: #c5a880;
+      color: #08090b;
+      border-radius: 3px;
+      float: right;
+      margin-top: 2px;
+    }
+
+    .email-hero-wrap {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      background: #050506;
+    }
+    .email-hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .email-hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(9, 10, 13, 0.2) 0%, rgba(9, 10, 13, 0.95) 92%);
+    }
+    .email-hero-tag {
+      position: absolute;
+      top: 20px;
+      left: 24px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-left: 2px solid #c5a880;
+    }
+    .email-hero-content {
+      position: absolute;
+      bottom: 20px;
+      left: 24px;
+      right: 24px;
+    }
+    .email-hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .email-hero-loc {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: #c5a880;
+      text-transform: uppercase;
+    }
+
+    .email-body {
+      padding: 28px 24px 20px;
+    }
+
+    .lead-meta-pill {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      background: #14171d;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      margin-bottom: 24px;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      color: #c2c6cf;
+      text-transform: uppercase;
+    }
+    .lead-meta-pill strong {
+      color: #ffffff;
+    }
+
+    .section-title-wrap {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .section-title {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      color: #c5a880;
+      text-transform: uppercase;
+    }
+    .section-sub {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: #7b8290;
+      text-transform: uppercase;
+    }
+
+    /* HIGHLIGHTS TWO-COLUMN CARD */
+    .highlights-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-bottom: 24px;
+      background: #11141a;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .highlights-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      vertical-align: middle;
+    }
+    .highlights-table tr:last-child td {
+      border-bottom: none;
+    }
+    .hl-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      color: #8c93a0;
+      text-transform: uppercase;
+      width: 38%;
+    }
+    .hl-value {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 0.03em;
+    }
+    .hl-value.gold {
+      color: #e5c89c;
+    }
+    .hl-value a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px dotted #c5a880;
+    }
+
+    /* DETAILS CARD */
+    .details-box {
+      background: #11141a;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-left: 3px solid #c5a880;
+      border-radius: 6px;
+      padding: 18px 20px;
+      margin-bottom: 28px;
+    }
+    .details-header {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: #c5a880;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .details-content {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #d1d5db;
+      font-family: inherit;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    /* ACTION BUTTONS (Matching Canva pill button) */
+    .action-row {
+      text-align: center;
+      padding: 10px 0 24px;
+    }
+    .btn-pill-primary {
+      display: inline-block;
+      padding: 14px 34px;
+      background: #ffffff;
+      color: #08090b !important;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25);
+      transition: all 0.2s ease;
+      margin: 6px;
+    }
+    .btn-pill-primary:hover {
+      background: #c5a880;
+      color: #08090b !important;
+      box-shadow: 0 6px 25px rgba(197, 168, 128, 0.45);
+    }
+    .btn-pill-secondary {
+      display: inline-block;
+      padding: 13px 28px;
+      background: transparent;
+      color: #ffffff !important;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      margin: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-pill-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+    }
+
+    /* FOOTER */
+    .email-footer {
+      background: #060709;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 24px;
+      text-align: center;
+    }
+    .footer-brand {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .footer-ateliers {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: #8c93a0;
+      margin-bottom: 12px;
+    }
+    .footer-note {
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: #555b66;
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding: 20px 10px 40px;
+      }
+      .showcase-title {
+        font-size: 1.8rem;
+      }
+      .email-hero-wrap {
+        height: 240px;
+      }
+      .email-hero-title {
+        font-size: 1.35rem;
+      }
+      .highlights-table td {
+        padding: 10px 14px;
+      }
+      .hl-label {
+        width: 45%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="showcase-header">
+    <div class="showcase-tag">REAL ESTATE &amp; ARCHITECTURAL TURNKEY</div>
+    <h1 class="showcase-title">NEW LISTING EMAIL GRAPHICS</h1>
+    <p class="showcase-sub">Automated luxury email dispatch template matching FORMA Architects' aesthetic.</p>
+  </header>
+
+  <div class="top-toolbar">
+    <a href="/" class="toolbar-btn">← BACK TO WEBSITE</a>
+    <button class="toolbar-btn active" id="btn-load-latest">LATEST SUBMISSION (LOKESH)</button>
+    <button class="toolbar-btn" id="btn-load-villa">SAMPLE: LUXURY VILLA</button>
+    <button class="toolbar-btn" id="btn-load-commercial">SAMPLE: CHENNAI TOWER</button>
+    <a href="/api/inquiries" target="_blank" class="toolbar-btn">RAW INQUIRIES JSON</a>
+  </div>
+
+  <!-- EMAIL NEWSLETTER MOCKUP CONTAINER -->
+  <main class="email-wrapper" id="email-preview-container">
+    <table class="email-table" cellpadding="0" cellspacing="0" border="0">
+      
+      <!-- Top Brand Header Bar -->
+      <tr>
+        <td class="email-top-bar">
+          <span class="email-brand">FORMA ARCHITECTS</span>
+          <span class="email-badge" id="preview-badge">TURNKEY BRIEF</span>
+        </td>
+      </tr>
+
+      <!-- Hero Architectural Photography Banner -->
+      <tr>
+        <td>
+          <div class="email-hero-wrap">
+            <img src="/image/clean_frames/frame_0119.jpg" alt="Luxury Architectural Estate" class="email-hero-img" id="hero-img">
+            <div class="email-hero-overlay"></div>
+            <div class="email-hero-tag" id="preview-tag">EXCLUSIVE SPECIFICATION BRIEF</div>
+            <div class="email-hero-content">
+              <h2 class="email-hero-title" id="preview-headline">BEAUTIFUL PRIVATE ESTATE</h2>
+              <div class="email-hero-loc" id="preview-loc-bar">PORUR, CHENNAI • 5,000 SQ FT</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Main Email Content Body -->
+      <tr>
+        <td class="email-body">
+          
+          <!-- Reference & Timestamp Pill -->
+          <div class="lead-meta-pill">
+            <span>REFERENCE: <strong id="preview-ref">#FORMA-TK-7606</strong></span>
+            <span id="preview-date">2026-11-05 10:06</span>
+          </div>
+
+          <!-- Section: The Highlights -->
+          <div class="section-title-wrap">
+            <span class="section-title">THE DETAILS &amp; HIGHLIGHTS</span>
+            <span class="section-sub">TURNKEY PARAMETERS</span>
+          </div>
+
+          <table class="highlights-table" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="hl-label">CLIENT NAME</td>
+              <td class="hl-value" id="preview-name">Lokesh</td>
+            </tr>
+            <tr>
+              <td class="hl-label">CONTACT PHONE</td>
+              <td class="hl-value"><a href="tel:+916379436393" id="preview-phone">+91 63794 36393</a></td>
+            </tr>
+            <tr>
+              <td class="hl-label">CLIENT EMAIL</td>
+              <td class="hl-value"><a href="mailto:lokeshonline414@gmail.com" id="preview-email">lokeshonline414@gmail.com</a></td>
+            </tr>
+            <tr>
+              <td class="hl-label">SITE LOCATION</td>
+              <td class="hl-value gold" id="preview-location">Porur, Chennai</td>
+            </tr>
+            <tr>
+              <td class="hl-label">PLOT / BUILT-UP</td>
+              <td class="hl-value" id="preview-area">5,000 SQ FT</td>
+            </tr>
+            <tr>
+              <td class="hl-label">TURNKEY SCOPE</td>
+              <td class="hl-value" id="preview-scope">Civil &amp; Structural Turnkey Execution</td>
+            </tr>
+            <tr>
+              <td class="hl-label">STRUCTURE TYPE</td>
+              <td class="hl-value" id="preview-structure">G+1 Duplex / Villa</td>
+            </tr>
+            <tr>
+              <td class="hl-label">START TIMELINE</td>
+              <td class="hl-value" id="preview-timeline">1-3 Months</td>
+            </tr>
+          </table>
+
+          <!-- Section: Requirements Details -->
+          <div class="section-title-wrap">
+            <span class="section-title">SPECIFICATION BRIEF</span>
+            <span class="section-sub">CLIENT REQUIREMENTS</span>
+          </div>
+
+          <div class="details-box">
+            <div class="details-header">PROJECT REQUIREMENTS &amp; SCOPE NOTES</div>
+            <div class="details-content" id="preview-details">Civil & Structural Turnkey execution required for residential plot in Porur, Chennai. Premium concrete finish, foundation waterproofing, and coordinated MEP planning.</div>
+          </div>
+
+          <!-- High-End Action Buttons (Matching Canva Pill Design) -->
+          <div class="action-row">
+            <a href="tel:+916379436393" class="btn-pill-primary" id="btn-call-client">
+              CALL CLIENT DIRECTLY
+            </a>
+            <a href="mailto:lokeshonline414@gmail.com" class="btn-pill-secondary" id="btn-mail-client">
+              REPLY VIA EMAIL
+            </a>
+          </div>
+
+        </td>
+      </tr>
+
+      <!-- Luxury Studio Signature Footer -->
+      <tr>
+        <td class="email-footer">
+          <div class="footer-brand">FORMA ARCHITECTS</div>
+          <div class="footer-ateliers">CHENNAI • COIMBATORE • BENGALURU</div>
+          <p class="footer-note">Confidential Turnkey Architectural Specification &bull; Delivered to venkatlokesh101@gmail.com</p>
+        </td>
+      </tr>
+
+    </table>
+  </main>
+
+  <script>
+    const dataPresets = {
+      latest: {
+        ref: "FORMA-TK-7606",
+        date: "2026-11-05 10:06:26",
+        name: "Lokesh",
+        phone: "+91 63794 36393",
+        email: "lokeshonline414@gmail.com",
+        location: "Porur, Chennai",
+        area: "5,000 SQ FT",
+        scope: "Civil & Structural Turnkey Execution",
+        structure: "G+1 Duplex / Villa",
+        timeline: "1-3 Months",
+        details: "Civil and Structural turnkey execution with specialized soil testing, foundation waterproofing, premium fair-faced concrete, and coordinated structural steel detailing.",
+        img: "/image/clean_frames/frame_0119.jpg"
+      },
+      villa: {
+        ref: "FORMA-TK-8821",
+        date: "2026-11-05 14:15:00",
+        name: "Venkat Lokesh",
+        phone: "+91 98400 12345",
+        email: "venkatlokesh101@gmail.com",
+        location: "Saravanampatti, Coimbatore",
+        area: "6,500 SQ FT",
+        scope: "Complete Turnkey (Design + Build + Handover)",
+        structure: "Luxury Contemporary Villa",
+        timeline: "Within 1 to 3 Months",
+        details: "Turnkey luxury estate with infinity pool, custom Italian marble flooring, 5D BIM clash-free structural engineering, smart home automation, and bioclimatic facade.",
+        img: "/image/clean_frames/frame_0090.jpg"
+      },
+      commercial: {
+        ref: "FORMA-TK-9340",
+        date: "2026-11-05 15:30:12",
+        name: "Devi Enterprises",
+        phone: "+91 94432 67890",
+        email: "projects@devienterprises.in",
+        location: "Alwarpet, Chennai",
+        area: "18,000 SQ FT",
+        scope: "Corporate Urban Turnkey",
+        structure: "Multi-Story Commercial / Glass Curtain Wall",
+        timeline: "3 to 6 Months",
+        details: "Urban headquarters with acoustic double-glazed curtain wall, post-tensioned slabs, subterranean mechanical parking, and LEED Gold green building compliance.",
+        img: "/image/clean_frames/frame_0060.jpg"
+      }
+    };
+
+    function applyData(item) {
+      document.getElementById('preview-ref').textContent = '#' + item.ref;
+      document.getElementById('preview-date').textContent = item.date;
+      document.getElementById('preview-headline').textContent = item.structure.toUpperCase();
+      document.getElementById('preview-loc-bar').textContent = `${item.location.toUpperCase()} • ${item.area}`;
+      document.getElementById('preview-name').textContent = item.name;
+      
+      const phoneEl = document.getElementById('preview-phone');
+      phoneEl.textContent = item.phone;
+      phoneEl.href = 'tel:' + item.phone.replace(/\\s+/g, '');
+
+      const emailEl = document.getElementById('preview-email');
+      emailEl.textContent = item.email;
+      emailEl.href = 'mailto:' + item.email;
+
+      document.getElementById('preview-location').textContent = item.location;
+      document.getElementById('preview-area').textContent = item.area;
+      document.getElementById('preview-scope').textContent = item.scope;
+      document.getElementById('preview-structure').textContent = item.structure;
+      document.getElementById('preview-timeline').textContent = item.timeline;
+      document.getElementById('preview-details').textContent = item.details;
+      document.getElementById('hero-img').src = item.img;
+
+      document.getElementById('btn-call-client').href = 'tel:' + item.phone.replace(/\\s+/g, '');
+      document.getElementById('btn-mail-client').href = 'mailto:' + item.email;
+    }
+
+    document.getElementById('btn-load-latest').addEventListener('click', (e) => {
+      document.querySelectorAll('.top-toolbar .toolbar-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      applyData(dataPresets.latest);
+    });
+
+    document.getElementById('btn-load-villa').addEventListener('click', (e) => {
+      document.querySelectorAll('.top-toolbar .toolbar-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      applyData(dataPresets.villa);
+    });
+
+    document.getElementById('btn-load-commercial').addEventListener('click', (e) => {
+      document.querySelectorAll('.top-toolbar .toolbar-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      applyData(dataPresets.commercial);
+    });
+  </script>
+</body>
+</html>
