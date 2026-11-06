@@ -12,3 +12,4 @@ last_email_sent.html
 .DS_Store
 Thumbs.db
 .vscode/
+push_to_github.bat
